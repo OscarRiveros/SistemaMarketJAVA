@@ -97,7 +97,7 @@ public class AgregarProveedor extends javax.swing.JDialog {
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cn = new conexionBD();
-        Connection cnn = (Connection) cn.ConectarBD();
+        Connection cnn = cn.ConectarBD();
         Statement  st;
         try {
             
@@ -129,7 +129,7 @@ public class AgregarProveedor extends javax.swing.JDialog {
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cnp = new conexionBD();
-        Connection cnn = (Connection) cnp.ConectarBD();
+        Connection cnn = cnp.ConectarBD();
         Statement  st;
         try {
             
@@ -450,7 +450,7 @@ public class AgregarProveedor extends javax.swing.JDialog {
             switch(opcion){
                 case 'n':
                         conexionBD cn = new conexionBD();// se crea la conexion 
-                        Connection cnn = (Connection) cn.ConectarBD();
+                        Connection cnn = cn.ConectarBD();
                         Statement  st; 
                         try{
                             String consulta="";
