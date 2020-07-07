@@ -54,11 +54,11 @@ public class RegistrarEmpleado extends javax.swing.JDialog {
         modelo = new DefaultTableModel(null, titulos);
 
         conexionBD cn = new conexionBD();
-        Connection cnn = cn.ConectarBD();
+        Connection cnn = (Connection) cn.ConectarBD();
         Statement st;
         try {
 
-            st = cnn.createStatement();
+            st = (com.mysql.jdbc.Statement) cnn.createStatement();
             ResultSet rs = st.executeQuery(sql);
 
             while (rs.next()) {
@@ -164,7 +164,7 @@ public class RegistrarEmpleado extends javax.swing.JDialog {
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cnp = new conexionBD();
-        Connection cnn = cnp.ConectarBD();
+        Connection cnn = (Connection) cnp.ConectarBD();
         com.mysql.jdbc.Statement  st;
         try {
             
@@ -723,7 +723,7 @@ private void btnResetearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
 // TODO add your handling code here:
     
      try {
-          Statement stm = cn.ConectarBD().createStatement();
+          Statement stm = (Statement) cn.ConectarBD().createStatement();
                     String consulta="";
                     consulta = "update empleado set ";
                     consulta +="contraseña='"+12345+"' where idempleado="+txtId.getText();

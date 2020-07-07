@@ -86,7 +86,7 @@ void verclientes(){
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cn = new conexionBD();
-        Connection cnn = cn.ConectarBD();
+        Connection cnn = (Connection) cn.ConectarBD();
         com.mysql.jdbc.Statement  st;
         try {
             
@@ -155,7 +155,7 @@ void verclientes(){
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cnp = new conexionBD();
-        Connection cnn = cnp.ConectarBD();
+        Connection cnn = (Connection) cnp.ConectarBD();
         com.mysql.jdbc.Statement  st;
         try {
             

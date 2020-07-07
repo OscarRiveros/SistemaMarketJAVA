@@ -230,7 +230,7 @@ void verproducto(){
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cn = new conexionBD();
-        Connection cnn = cn.ConectarBD();
+        Connection cnn = (Connection) cn.ConectarBD();
         Statement  st;
         try {
             
@@ -271,7 +271,7 @@ void verproducto(){
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cn = new conexionBD();
-        Connection cnn = cn.ConectarBD();
+        Connection cnn = (Connection) cn.ConectarBD();
         Statement  st;
         try {
             
@@ -679,7 +679,7 @@ void verproducto(){
             switch(opcion){
                 case 'n':
                         conexionBD cn = new conexionBD();// se crea la conexion 
-                        Connection cnn = cn.ConectarBD();
+                        Connection cnn = (Connection) cn.ConectarBD();
                         Statement  st; 
                         try{
                             String consulta="";

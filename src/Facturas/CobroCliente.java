@@ -123,7 +123,7 @@ public class CobroCliente extends javax.swing.JDialog {
         modelo = new DefaultTableModel(null, titulos);
 
         conexionBD cnx = new conexionBD();
-        Connection cnn = cnx.ConectarBD();
+        Connection cnn = (Connection) cnx.ConectarBD();
         com.mysql.jdbc.Statement st;
         try {
 
@@ -163,7 +163,7 @@ public class CobroCliente extends javax.swing.JDialog {
         modelo2 = new DefaultTableModel(null, titulos);
 
         conexionBD cnp = new conexionBD();
-        Connection cnn = cnp.ConectarBD();
+        Connection cnn = (Connection) cnp.ConectarBD();
         com.mysql.jdbc.Statement stt;
         try {
 
@@ -358,7 +358,7 @@ public class CobroCliente extends javax.swing.JDialog {
         modelo3 = new DefaultTableModel(null, titulos);
 
         conexionBD cno = new conexionBD();
-        Connection cmn = cno.ConectarBD();
+        Connection cmn = (Connection) cno.ConectarBD();
         com.mysql.jdbc.Statement stt;
         try {
 
@@ -469,7 +469,7 @@ void agregartablafactura(){
        DefaultTableModel tabla = (DefaultTableModel) this.tablarecibo.getModel();
 
         conexionBD cnx = new conexionBD();
-        Connection cnn = cnx.ConectarBD();
+        Connection cnn = (Connection) cnx.ConectarBD();
         com.mysql.jdbc.Statement st;
         try {
 

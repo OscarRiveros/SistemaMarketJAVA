@@ -153,7 +153,7 @@ public class FacturaCompra extends javax.swing.JDialog {
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cnx = new conexionBD();
-        Connection cnn = cnx.ConectarBD();
+        Connection cnn = (Connection) cnx.ConectarBD();
         com.mysql.jdbc.Statement  st;
         try {
             
@@ -184,7 +184,7 @@ public class FacturaCompra extends javax.swing.JDialog {
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cnp = new conexionBD();
-        Connection cnn = cnp.ConectarBD();
+        Connection cnn = (Connection) cnp.ConectarBD();
         com.mysql.jdbc.Statement  st;
         try {
             
@@ -283,7 +283,7 @@ public class FacturaCompra extends javax.swing.JDialog {
         //tabla = new DefaultTableModel(null, titulos);
     
         conexionBD cnb = new conexionBD();
-        Connection cnn = cnb.ConectarBD();
+        Connection cnn = (Connection) cnb.ConectarBD();
         Statement  st;
         try {
             
@@ -317,7 +317,7 @@ public class FacturaCompra extends javax.swing.JDialog {
         DefaultTableModel m = new DefaultTableModel(null, titulos);
     
         conexionBD cn = new conexionBD();
-        Connection cnn = cn.ConectarBD();
+        Connection cnn = (Connection) cn.ConectarBD();
         Statement  st;
         try {
             
@@ -425,42 +425,42 @@ public class FacturaCompra extends javax.swing.JDialog {
      
        if(iva==0){
            Object[] valor = new Object[8];
-           valor[0] = txtCodigo.getText();
-           valor[1] = txtDescripcion.getText();
-           valor[2] = txtCantidad.getText();
-           valor[3] = txtPrecioCompra.getText();
-           valor[4] = txtPrecioVenta.getText();          
-           valor[5] = txtTotal1.getText();
-           valor[6] = "0";
-           valor[7] = "0";
+           valor[0] = (String) txtCodigo.getText();
+           valor[1] = (String) txtDescripcion.getText();
+           valor[2] = (String) txtCantidad.getText();
+           valor[3] = (String) txtPrecioCompra.getText();
+           valor[4] = (String) txtPrecioVenta.getText();          
+           valor[5] = (String) txtTotal1.getText();
+           valor[6] = (String) "0";
+           valor[7] = (String) "0";
            
            tabla.addRow(valor);
        }
        else{
            if(iva==5){
            Object[] valor = new Object[8];
-           valor[0] = txtCodigo.getText();
-           valor[1] = txtDescripcion.getText();
-           valor[2] = txtCantidad.getText();
-           valor[3] = txtPrecioCompra.getText();
-           valor[4] = txtPrecioVenta.getText(); 
-           valor[5] = "0";
-           valor[6] = txtTotal1.getText();
-           valor[7] = "0";
+           valor[0] = (String) txtCodigo.getText();
+           valor[1] = (String) txtDescripcion.getText();
+           valor[2] = (String) txtCantidad.getText();
+           valor[3] = (String) txtPrecioCompra.getText();
+           valor[4] = (String) txtPrecioVenta.getText(); 
+           valor[5] = (String) "0";
+           valor[6] = (String) txtTotal1.getText();
+           valor[7] = (String) "0";
            
            tabla.addRow(valor);
            }
            else{
                if(iva==10){
                     Object[] valor = new Object[8];
-                    valor[0] = txtCodigo.getText();
-                    valor[1] = txtDescripcion.getText();
-                    valor[2] = txtCantidad.getText();
-                    valor[3] = txtPrecioCompra.getText();
-                    valor[4] = txtPrecioVenta.getText(); 
-                    valor[5] = "0";
-                    valor[6] = "0";
-                    valor[7] = txtTotal1.getText();
+                    valor[0] = (String) txtCodigo.getText();
+                    valor[1] = (String) txtDescripcion.getText();
+                    valor[2] = (String) txtCantidad.getText();
+                    valor[3] = (String) txtPrecioCompra.getText();
+                    valor[4] = (String) txtPrecioVenta.getText(); 
+                    valor[5] = (String) "0";
+                    valor[6] = (String) "0";
+                    valor[7] = (String) txtTotal1.getText();
 
                     tabla.addRow(valor);
                 }

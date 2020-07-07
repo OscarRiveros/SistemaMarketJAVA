@@ -139,7 +139,7 @@ public class AgreMarca extends javax.swing.JDialog{
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cn = new conexionBD();
-        Connection cnn = cn.ConectarBD();
+        Connection cnn = (Connection) cn.ConectarBD();
         Statement  st;
         try {
             
@@ -168,7 +168,7 @@ public class AgreMarca extends javax.swing.JDialog{
         modelo = new DefaultTableModel(null, titulos);
     
         conexionBD cnp = new conexionBD();
-        Connection cnn = cnp.ConectarBD();
+        Connection cnn = (Connection) cnp.ConectarBD();
         Statement  st;
         try {
             
@@ -418,7 +418,7 @@ public class AgreMarca extends javax.swing.JDialog{
             switch(opcion){
                 case 'n':
                       conexionBD cn = new conexionBD();// se crea la conexion 
-                      Connection cnn = cn.ConectarBD();
+                      Connection cnn = (Connection) cn.ConectarBD();
                       Statement  st; 
                       try {
                           String consulta="";
